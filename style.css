@@ -1,0 +1,527 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: #1c232d;
+    --DarkBlueStar: #2f3947;
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --orange: hsl(25, 97%, 53%);
+    --redTitle: rgb(255 53 12);
+    --fontSize: 15px;
+    --ColorRedBotton:rgb(255, 71, 47);
+    --ColorGreenBotton:rgb(0, 211, 0);
+    --redNotingValue: rgb(255, 42, 0);
+    --greenRs: #008000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--VeryDarkBlue);
+}
+.mainContainer{
+    width: 320px;
+    height: 90%;
+}
+.titleCreator{
+    text-align: center;
+    color: var(--orange);
+    font-size: 12px;
+    padding: 0 0 30px 0;
+}
+.Title{
+    text-align: center;
+    color: var(--redTitle);
+    -webkit-text-stroke:1px var(--orange);
+}
+.seccionesFormulas{
+    margin: 30px 0 0 0;
+    padding: 0 0 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerCalculos{
+    margin: 50px 0;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.containerCalculos p{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 20px;
+}
+.containerCalculos p:hover{
+    background-color: var(--DarkBlue);
+    border-radius: 5px;
+}
+.containerCalculos .botonActivo{
+    border: 1px solid var(--LightGrey);
+    background-color: var(--DarkBlue);
+    border-radius: 5px;
+}
+/* añadiendo la parte de formulas Matematicas */
+
+.formulasMatematicas{
+    width: 300px;
+    border: 1px solid var(--MediumGrey);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--DarkBlue);
+
+}
+.formulasMatematicas .title{
+    margin: 20px 0 10px 0;
+    color: var(--orange);
+    -webkit-text-stroke:0.1px var(--redTitle);
+    font-style: italic;
+}
+.formulasMatematicas .sectionCalculo h3{
+    margin: 10px 0;
+    color: var(--White);
+    font-size: 16px;
+}
+.formulasMatematicas .sectionCalculo{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formulasMatematicas .cajaInputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.input{
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+.formulasMatematicas .CalculoCuadrado, .CalculoTriangulo{
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid var(--orange);
+}
+.formulasMatematicas .PerimetroAreaCirculo{
+    margin: 0 0 10px 0;
+}
+.formulasMatematicas 
+.PerimetroAreaCuadradoButton,
+.PerimetroAreaTrianguloButton,
+.PerimetroAreaCirculoButton{
+    height: 30px;
+    margin: 0 0 20px 0;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--orange);
+    color: var(--White);
+    font-weight: bold;
+    cursor: pointer;
+}
+.formulasMatematicas 
+.PerimetroAreaCuadradoButton:active,
+.PerimetroAreaTrianguloButton:active,
+.PerimetroAreaCirculoButton:active{
+    color: var(--orange);
+    background-color: var(--White);
+}
+/* Cuadrado */
+.resultadosFiguras{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+    background-color: var(--DarkBlueStar);
+    color: var(--White);
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 14px;
+    gap: 3px;
+    border: 1px solid var(--MediumGrey);
+}
+.resultadosFiguras .TitleFigure{
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--orange);
+}
+.CalculoCirculo .resultadosFiguras{
+    margin: 0 0 10px 0;
+}
+/* porsentajes container */
+.porcentajesContainer{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--DarkBlue);
+    gap: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--MediumGrey);
+}
+.porcentajesContainer .title{
+    font-style: italic;
+    text-align: center;
+    -webkit-text-stroke:0.1px var(--redTitle);
+    color: var(--orange);
+    font-size: 20px;
+    padding: 5px 0 0 0;
+}
+.porcentajesContainer .cajaInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.porcentajesContainer .cajaInputs h3{
+    color: var(--White);
+    font-size: 20px;
+}
+.porcentajesContainer .inputs{
+    height: 30px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+}
+.porcentajesContainer 
+.CalcularDescuento,
+.VaciarDatosDescuento,
+.AplicarDescuento,
+.VaciarDatosDecuentosCupones{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--orange);
+    color: var(--White);
+    font-weight: bold;
+}
+.porcentajesContainer:active 
+.CalcularDescuento:active,
+.VaciarDatosDescuento:active,
+.AplicarDescuento:active,
+.VaciarDatosDecuentosCupones:active{
+    color: var(--orange);
+    background-color: var(--White);
+}
+.seccionDescuentos h3{
+    text-align: center;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid var(--orange);
+}
+.seccionDescuentos .resultadoFinal{
+    padding: 5px 0 5px 0;
+}
+/* aqui estoy reutilizando codigo css para evitar repetirlo pendiente */
+.seccionDescuentos,
+.ResultadoCuponesDecuentos{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    background-color: var(--DarkBlueStar);
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--White);
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid var(--MediumGrey);
+}
+/* cupones de descuento */
+.ResultadoCuponesDecuentos h3{
+    text-align: center;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid var(--orange);
+}
+.ResultadoCuponesDecuentos .cuponNoExiste{
+    text-align: center;
+}
+/* estadistica */
+.estadisticasBasica{
+    width: 300px;
+    border: 1px solid var(--MediumGrey);
+    background-color: var(--DarkBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 5px;
+}
+.estadisticasBasica .inputs{
+    width: 85px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+.estadisticasBasica h1{
+    color: var(--orange);
+    -webkit-text-stroke:0.1px var(--redTitle);
+    font-style: italic;
+    padding: 20px 0 10px 0;
+}
+.estadisticasBasica h3{
+    color: var(--White);
+}
+.estadisticasBasica .botonesCalcularEstadisticas{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 2px;
+}
+.estadisticasBasica .botonesCalcularEstadisticas .button{
+    height: 30px;
+    background-color: var(--orange);
+    color: var(--White);
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.estadisticasBasica .botonesCalcularEstadisticas .button:hover{
+    background-color: var(--White);
+    color: var(--orange);
+    border: 2px solid var(--orange);
+}
+.estadisticasBasica .containerBotonesControl{
+    padding: 10px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.estadisticasBasica .containerBotonesControl .añadirInput{
+    background-color: var(--greenRs);
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.estadisticasBasica .containerBotonesControl .añadirInput:active{
+    background-color: rgb(0, 182, 0);
+}
+.estadisticasBasica .containerBotonesControl .quitarInput{
+    background-color: rgb(255, 38, 0);
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+.estadisticasBasica .containerBotonesControl .quitarInput:active{
+    background-color: var(--ColorRedBotton);
+    
+}
+.estadisticasBasica .containerBotonesControl .calcularResultadosPMM{
+    background-color: var(--greenRs);
+    color: var(--White);
+    font-weight: bold;
+    cursor: pointer;
+}
+.estadisticasBasica .containerBotonesControl .button{
+    height: 30px;
+    border: none;
+}
+.estadisticasBasica .containerInputs{
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 5px;
+    margin: 0 0 20px 0;
+}
+.estadisticasBasica .containerInputs input{
+    padding: 10px;
+    background-color: var(--VeryDarkBlue);
+    color: var(--White);
+}
+.estadisticasBasica .containerInputs input::placeholder{
+    color: var(--White);
+}
+.estadisticasBasica .resltadosPorsentajesPMM{
+    width: 90%;
+    background-color: var(--DarkBlueStar);
+    border: 1px solid var(--MediumGrey);
+    border-radius: 5px;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    font-weight: bold;
+    color: var(--White);
+    gap: 10px;
+}
+.estadisticasBasica .botonesCalcularEstadisticas .button--promedios-active{
+    background-color: var(--White);
+    color: orange;
+    border: 2px solid var(--orange);
+}
+.estadisticasBasica .inactive{
+    display: none;
+}
+/* analisis salarial  */
+.analisis_Salarial{
+    border-radius: 5px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--MediumGrey);
+    background-color: var(--DarkBlue);
+}
+.analisis_Salarial h1{
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+    font-style: italic;
+    -webkit-text-stroke:0.1px var(--redTitle);
+    color: var(--orange);
+}
+.salarioPorPersona{
+    width: 80%;
+    border-bottom: 1px solid var(--orange);
+}
+.analisis_Salarial .salarioPorPersona h3{
+    text-align: center;
+    margin: 10px 0 20px 0;
+    color: var(--White);
+}
+.inputsPersonas{
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20px 0;
+}
+.inputsPersonas 
+#NombrePersona,
+.button--salario-persona{
+    height: 30px;
+    border-radius: 5px;
+}
+.inputsPersonas #NombrePersona{
+    padding: 10px;
+    border: none;
+}
+.inputsPersonas .button--salario-persona{
+    border: none;
+    color: var(--White);
+    background-color: var(--orange);
+    font-weight: bold;
+}
+.inputsPersonas .button--salario-persona:active{
+    background-color: var(--White);
+    color: var(--orange);
+}
+.salarioPorPersona .rsAnalisisPersona{
+    background-color: var(--DarkBlueStar);
+    border: 1px solid var(--MediumGrey);
+    color: var(--White);
+    font-weight: bold;
+    font-size: 14px;
+    flex-direction: column;
+    border-radius: 5px;
+    gap: 10px;
+    padding: 15px;
+    margin: 0 0 30px 0;
+}
+.salarioPorPersona .rsAnalisisPersona p:nth-child(1){
+    text-align: center;
+    border-bottom: 1px solid var(--orange);
+    padding: 0 0 10px 0;
+}
+.salarioPorPersona .rsAnalisisPersona.spaceBetween.inactive{
+    display: none;
+}
+/* ahora viene el de las empresas */
+.analisis_Salarial .salarioPorEmpresa{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 20px 0;
+}
+.analisis_Salarial .salarioPorEmpresa h3{
+    margin: 20px 0;
+    color: var(--White);
+}
+.analisis_Salarial .salarioPorEmpresa .inputsEmpresas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.salarioPorEmpresa .inputsEmpresas 
+#NombreEmpresa,.button--salario-empresa{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+.salarioPorEmpresa .inputsEmpresas #NombreEmpresa{
+    padding: 10px;
+}
+.salarioPorEmpresa .inputsEmpresas .button--salario-empresa{
+    color: var(--White);
+    font-weight: bold;
+    background-color: var(--orange);
+}
+.salarioPorEmpresa .inputsEmpresas .button--salario-empresa:active{
+    color: var(--orange);
+    background-color: var(--White);
+}
+.rsAnalisisEmpresa{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    background-color: var(--DarkBlueStar);
+    border: 1px solid var(--MediumGrey);
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--White);
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+.rsAnalisisEmpresa p:nth-child(1){
+    text-align: center;
+    border-bottom: 1px solid var(--orange);
+    padding: 0 0 10px 0;
+}
+.rsAnalisisEmpresa.spaceBetween.inactive{
+    display: none;
+}
+.spaceBetween{
+    display: flex;
+    justify-content: space-between;
+}
+.inactive{
+    display: none;
+}
+@media (min-width:600px){
+    .mainContainer{
+        width: 600px;
+    }
+    .containerCalculos{
+        flex-direction: row;
+        gap: none;
+        align-items: none;
+    }
+    .containerCalculos p{
+        width: 200px;
+        font-size: 18px;
+    }
+}
+
+

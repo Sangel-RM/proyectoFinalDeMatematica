@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" media="(min-width: 375px)">
+    <link rel="stylesheet" href="./mediaQuerysMate.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="icon" href="./Cool-Firefox-Logo-PNG.png">
+    <title>Calcular el promedio de los trabajadores</title>
+</head>
+<body>
+    <main class="mainContainer">
+        <h1 class="Title">Taller Práctico de javaScript: Matemática y Estadística Básica </h1>
+        <div class="containerCalculos">
+            <p class="Mate">Matemáticas</p><p class="Porcentajes">Porcentajes</p><p class="Estadistica">Estadistica</p><p class="analisis-Salarial">Analisis Salarial</p>
+        </div>
+        <section class="seccionesFormulas inactive">
+            <section class="formulasMatematicas inactive">
+                <h1 class="title">Formulas Matemáticas</h1>
+                <div class="CalculoCuadrado sectionCalculo">
+                    <h3>Calcular Perimetro y área de un Cuadrado</h3>
+                    <div class="cajaInputs">
+                        <input type="number" id="BasePerimetroCuadrado" class="input" placeholder="Base">
+                        <button class="PerimetroAreaCuadradoButton">Calcular Cuadrado</button>
+                    </div>
+                    <div class="resultadosCuadrado resultadosFiguras inactive">
+                        <p class="TitleFigure">Cuadrado</p>
+                        <div class="cuadradoValor spaceBetween"><p>Lados:</p><span class="rsLadosC"></span></div>
+                        <div class="cuadradoPerimetro spaceBetween"><p>Perimetro:</p><span class="rsPerimetroC"></span></div>
+                        <div class="areaCuadrado spaceBetween"><p>Area:</p><span class="rsAreaC"></span></div>
+                    </div>
+                </div>
+                <div class="CalculoTriangulo sectionCalculo">
+                    <h3>Calcular Perímetro y área de un triangulo</h3>
+                    <div class="cajaInputs">
+                        <input type="number" id="BaseTriangunlo" class="input" placeholder="Base">
+                        <input type="number" id="Lado1Triangulo" class="input" placeholder="Lado1">
+                        <input type="number" id="Lado2Triangulo" class="input" placeholder="Lado2">
+                        <button class="PerimetroAreaTrianguloButton">Calcular triangulo</button>
+                    </div>
+                    <div class="resultadosTriangulo resultadosFiguras inactive">
+                        <p class="TitleFigure">Triangulo</p>
+                        <div class="trianguloBase spaceBetween"><p>Base:</p><span class="rsTrianguloBase"></span></div>
+                        <div class="trianguloLado1 spaceBetween"><p>lado 1:</p><span class="rsTrianguloL1"></span></div>
+                        <div class="trianguloLado2 spaceBetween"><p>lado 2:</p><span class="rsTrianguloL2"></span></div>
+                        <div class="trianguloPerimetro spaceBetween"><p>Perimetro:</p><span class="rsTrangunloPerimetro"></span></div>
+                        <div class="trianguloArea spaceBetween"><p>Area:</p><span class="rsTrianguloArea"></span></div>
+                        <!-- <div class="trianguloTipo spaceBetween"><p>Tipo:</p><span class="rsTrianguloTipo"></span></div> -->
+                    </div>
+                </div>
+                <div class="CalculoCirculo sectionCalculo">
+                    <h3>Calcular Perímetro y área de un circulo</h3>
+                    <div class="cajaInputs">
+                        <input type="number" id="RadioCirculo" class="input" placeholder="Radio">
+                        <button class="PerimetroAreaCirculoButton">Calcular Radio Circulo</button>
+                    </div>
+                    <div class="resultadosCirculo resultadosFiguras inactive">
+                        <p class="TitleFigure">Circulo</p>
+                        <div class="radioCirculo spaceBetween"><p>Radio:</p><span class="rsRadioCirculo"></span></div>
+                        <div class="diametroCirculo spaceBetween"><p>Diametro:</p><span class="rsDiametroCirculo"></span></div>
+                        <div class="circunferenciaCirculo spaceBetween"><p>Circunferencia:</p><span class="rsCircunferenciaCirculo"></span></div>
+                        <div class="areaCirculo spaceBetween"><p>Area:</p><span class="rsAreaCirculo"></span></div>
+                    </div>
+                </div>
+            </section>
+            <!-- otra seccion -->
+            <section class="porcentajesContainer inactive">
+                <h1 class="title">Porcentajes</h1>
+                <div class="descontarUnPrecio cajaInputs">
+                    <h3>Aplicar Descuento a un precio</h3>
+                    <input type="number" id="PrecioADescontar" class="inputs" placeholder="Precio a Descontar">
+                    <input type="number" id="Descuento" class="inputs" placeholder="Descuento %">
+                    <button class="CalcularDescuento">Calcular Descuento</button>
+                    <button class="VaciarDatosDescuento">Limpiar</button>
+                    <div class="seccionDescuentos inactive">
+                        <h3>Descuento</h3>
+                        <p class="DescuentoMayorA100 inactive"></p>
+                        <div class="resultadoFinalDescuento spaceBetween inactive"><p class="pResultadoDescuento">Resultado:</p><span class="rsDecuento"></span></div>
+                    </div>
+                </div>
+                <div class="cuponesDescuentos cajaInputs">
+                    <h3>Aplicar descuento a un precio con cupón</h3>
+                    <input type="number" id="PrecioADescontarConCupon" class="inputs" placeholder="Precio a Descontar">
+                    <input type="text" id="Cupon" class="inputs" placeholder="Cupon" list="Cupones"> 
+                    <datalist id="Cupones">
+                        <option value="Dixtrix">Dixtrix</option>
+                        <option value="Master-x">Master-x</option>
+                        <option value="Xforse">Xforse</option>
+                        <option value="Sxml">Sxml</option>
+                        <option value="LostXtrix">LostXtrix</option>
+                        <option value="Defter">Defter</option>
+                        <option value="Shein-D">Shein-D</option>
+                        <option value="LasXtris">LasXtris</option>
+                        <option value="TerraPlan">TerraPlan</option>
+                        <option value="Leguen">Leguen</option>
+                        <option value="DTXTP">DTXTP</option>
+                        <option value="LPTM">LPTM</option>
+                        <option value="Dante">Dante</option>
+                        <option value="Dimitrix">Dimitrix</option>
+                        <option value="Landa">Landa</option>
+                        <option value="Xports">Xports</option>
+                        <option value="LaCrinch"></option>
+                        <option value="Dota">Dota</option>
+                        <option value="CiberPuck">CiberPuck</option>
+                        <option value="MasterLeguen">MasterLeguen</option>
+                    </datalist>
+                    <button class="AplicarDescuento">Aplicar Descuento</button>
+                    <button class="VaciarDatosDecuentosCupones">Limpiar</button>
+                    <div class="ResultadoCuponesDecuentos inactive">
+                        <h3 class="TituloDescuento">Descuento</h3>
+                        <p class="cuponNoExiste inactive"></p>
+                        <div class="descuentoCupon spaceBetween inactive"><p class="valorDesC">descuento del</p><span class="DescuentoCupon iconMoney"></span></div>
+                        <div class="PrecioFinalCupon spaceBetween inactive"><p class="valorNPrecio">Precio Final:</p><span class="ValorDescuento iconMoney"></span></div>
+                    </div>
+                </div>
+            </section>
+            <!-- otra seccion -->
+            <section class="estadisticasBasica inactive">
+                <h1>Estádistica Básica</h1>
+                <h3>Seleccione la opción</h3>
+                <div class="botonesCalcularEstadisticas">
+                    <button id="selectPromedio" class="button">Promedio</button>
+                    <button id="selectMediana" class="button">Mediana</button>
+                    <button id="selectModa" class="button">Moda</button>
+                    <div class="containerBotonesControl">
+                        <!-- botones quitando y sumando mas inputs para la calcular la moda -->
+                        <button class="añadirInput inputs">+</button>
+                        <button class="quitarInput inputs">-</button>
+                        <button class="calcularResultadosPMM inputs">Calcular</button>
+                    </div>
+                </div>
+                    <div class="containerInputs">
+                        <input type="number" id="valorPorsentaje1"  placeholder="valor 1" class="inputs">
+                        <input type="number" id="valorPorsentaje2"  placeholder="valor 2" class="inputs">
+                    </div>
+        
+                    <div class="resltadosPorsentajesPMM inactive">
+                        <div class="sumaValoresPMM spaceBetween"><span class="resultadosSumaValoresP"></span></div>
+                        <div class="cantidadValoresPMM spaceBetween"><span class="canditadVPMM"></span></div>
+                        <div class="noEstanlosDatos inactive"><p class="noSelectClass"></p></div>
+                        <div class="resultadosPMM"><p class="ResultadosPMMV"></p></div>
+                </div>
+            </section>
+            <!-- otra seccion -->
+            <section class="analisis_Salarial inactive">
+                <h1>Análisis salarial</h1>
+                <div class="salarioPorPersona">
+                    <h3>Salario Por Persona</h3>
+                    <div class="inputsPersonas">
+                        <input type="text" id="NombrePersona" placeholder="Nombre" list="select_persona">
+                        <datalist id="select_persona">
+                        </datalist>
+                        <button class="button--salario-persona">Analisis de salario</button>
+                    </div>
+                    <div class="rsAnalisisPersona spaceBetween inactive">
+                    </div>
+                </div>
+                <div class="salarioPorEmpresa">
+                    <h3>Salario Por Empresa</h3>
+                    <div class="inputsEmpresas">
+                        <input type="text" id="NombreEmpresa" placeholder="Nombre" list="select_empresa">
+                        <datalist id="select_empresa">
+                        </datalist>
+                        <button class="button--salario-empresa">Analisis de salario</button>
+                    </div>
+                    <div class="rsAnalisisEmpresa spaceBetween inactive">
+                    </div>
+                </div>
+            </section>
+        </section>
+        <h2 class="titleCreator">Create By: Sangel RM 😎</h2>
+    </main>
+    <script src="./platzimath.js"></script>
+    <script src="./FormulaMatematicas.js"></script>
+    <script src="./porsentajes.js"></script>
+    <script src="./estadistica.js"></script>
+    <script src="./salarios.js"></script>
+    <script src="./analisisSalarial.js"></script>
+    <script src="./cambiosDeVista.js"></script>
+</body>
+</html>
